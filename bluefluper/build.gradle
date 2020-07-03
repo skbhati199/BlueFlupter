@@ -1,7 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 29
@@ -10,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -64,4 +65,26 @@ artifacts {
 
  */
 
-apply from: 'publish.gradle'
+ext {
+    bintrayRepo = 'bluefluper'
+    bintrayName = 'bluefluper'
+    publishedGroupId = 'com.fluper.bluefluper'
+    libraryName = 'bluefluper'
+    artifact = 'bluefluper'
+    libraryDescription = 'A widget to load WebView as an Overlay.'
+    siteUrl = 'https://github.com/ptyagicodecamp/webview-overlay'
+    gitUrl = 'https://github.com/ptyagicodecamp/webview-overlay.git'
+    libraryVersion = '1.0.1'
+    developerId = 'skbhati199'
+    developerName = 'Sonu'
+    developerEmail = 'skbhati199@email.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+//apply from: 'publish.gradle'

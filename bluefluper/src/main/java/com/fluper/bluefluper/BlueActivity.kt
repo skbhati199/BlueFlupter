@@ -3,7 +3,7 @@ package com.fluper.bluefluper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class BlueActivity : AppCompatActivity() {
+abstract class BlueActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
