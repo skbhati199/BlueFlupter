@@ -1,0 +1,3 @@
+rootProject.name='BlueFlupter'
+include ':app'
+include ':bluefluper'
